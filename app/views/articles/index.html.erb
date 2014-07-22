@@ -1,0 +1,15 @@
+<%= link_to "<< Home", root_path %>
+
+<h1>Wikiful Articles</h1>
+<% @articles.each do |article| %>
+<div class="index-article">
+  <h3><%= link_to article.title.titleize, article %></h3>
+  <p>Published on <%= article.created_at.strftime("%b %d, %Y") %></p>
+  <p>Filed under: <% article.categories.each do |cat| %>
+    <%= link_to(cat.name, cat) %>&nbsp;<% end %>
+  </p>
+  <p><%= truncate(article.content, length: 200) %><span class="read-more"><%= link_to("Read more", article) %></span></p>
+</div>
+<% end %>
+<br>
+<%= link_to "<< Home", root_path %>

@@ -1,0 +1,8 @@
+<h1>These are all of our categories:</h1>
+<% @categories.each do |cat| %>
+<div>
+  <h3><%= link_to cat.name, cat %></h3>
+</div>
+<% end %>
+<br>
+<%= link_to "Home", root_path %>

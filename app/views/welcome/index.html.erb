@@ -1,0 +1,13 @@
+<% @title = "Index" %>
+<h1>Welcome to Wikiful!</h1>
+<h3>Here are our most recent articles:</h3>
+<% @articles.each do |article| %>
+<div class="index-welcome">
+  <p><%= link_to article.title.titleize, article %></p>
+  <p><span>Published on:</span> <%= article.created_at.strftime("%b %d, %Y") %></p>
+  <p><span>Filed under:</span> <% article.categories.order(:name).each do |category| %>
+    <%= link_to category.name, category %>&nbsp;<% end %></p>
+  <p><span>Preview:</span> <%= truncate(article.content, length: 100) %></p>
+</div>
+<% end %>
+  

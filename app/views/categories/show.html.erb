@@ -1,0 +1,12 @@
+<%= link_to "Back to Categories", categories_path %> | 
+<%= link_to "Home", root_path %>
+<div>
+  <h1><%= @category.name %></h1>
+  <% @articles.each do |article| %>
+  <p><%= article.created_at.strftime("%b %d, %Y")%>&nbsp;&nbsp;
+    <%= link_to article.title, article %></p>
+  <% end %>
+</div>
+<br>
+<%= link_to "Back to Categories", categories_path %> | 
+<%= link_to "Home", root_path %>

@@ -1,0 +1,47 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.span9 {
+	box-sizing: border-box;
+	padding: 20px;
+	margin-bottom: 50px;
+	border: 1px solid #ddd;
+	box-shadow: 5px 5px 10px #888888;
+	> a {
+		font-size: 14px;
+	}
+}
+
+.index-article {
+	h3 {
+		font-size: 20px;
+	}
+
+	p:first-of-type {
+		font-weight: bold;
+	}
+}
+
+.show-article {
+	p {
+		float: right;
+	}
+	div {
+		clear: both;
+		text-indent: 20px;
+	}
+}
+
+textarea.article-content {
+	width: 500px;
+}
+
